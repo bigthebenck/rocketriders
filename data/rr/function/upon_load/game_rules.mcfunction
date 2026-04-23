@@ -1,0 +1,23 @@
+gamerule minecraft:allow_entering_nether_using_portals false
+gamerule minecraft:keep_inventory true
+gamerule minecraft:advance_time false
+gamerule minecraft:advance_weather false
+gamerule minecraft:block_drops false
+gamerule minecraft:mob_drops false
+gamerule minecraft:entity_drops false
+gamerule minecraft:spawn_mobs false
+gamerule minecraft:spawn_phantoms false
+gamerule minecraft:spawn_patrols false
+gamerule minecraft:spawn_wandering_traders false
+gamerule minecraft:spread_vines false
+gamerule minecraft:max_block_modifications 1000000
+gamerule minecraft:log_admin_commands false
+gamerule minecraft:players_nether_portal_creative_delay 2147483647
+gamerule minecraft:players_nether_portal_default_delay 2147483647
+gamerule minecraft:locator_bar false
+gamerule minecraft:water_source_conversion false
+#use freeze_damage to control ender pearl damage
+gamerule minecraft:freeze_damage false
+gamerule immediate_respawn true
+gamerule minecraft:max_command_sequence_length 1000000
+gamerule minecraft:max_command_forks 1000000

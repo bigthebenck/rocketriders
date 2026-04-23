@@ -1,0 +1,1 @@
+function custom:update_armor

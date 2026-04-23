@@ -1,0 +1,39 @@
+{
+  "condition": "minecraft:any_of",
+  "terms": [
+    {
+      "condition": "location_check",
+      "predicate": {
+        "dimension": "minecraft:overworld",
+        "position": {
+          "y": {
+            "max": -20
+          }
+        }
+      }
+    },
+    {
+      "condition": "minecraft:all_of",
+      "terms": [
+        {
+          "condition": "minecraft:inverted",
+          "term": {
+            "condition": "minecraft:reference",
+            "name": "game:match_components/lower_void"
+          }
+        },
+        {
+          "condition": "location_check",
+          "predicate": {
+            "dimension": "minecraft:overworld",
+            "position": {
+              "y": {
+                "max": 0
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

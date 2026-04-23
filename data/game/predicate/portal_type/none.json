@@ -1,0 +1,4 @@
+{
+  "condition": "minecraft:reference",
+  "name": "game:match_components/no_portals"
+}

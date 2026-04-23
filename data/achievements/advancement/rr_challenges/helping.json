@@ -1,0 +1,25 @@
+{
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "color": "green",
+      "text": "Let your team win a match, but never fire a single missile yourself."
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "id": "minecraft:red_bed"
+    },
+    "show_toast": true,
+    "title": {
+      "color": "#00be2f",
+      "text": "I'm Helping!"
+    }
+  },
+  "parent": "achievements:rr_challenges/sabotage"
+}

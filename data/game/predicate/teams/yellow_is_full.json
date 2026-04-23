@@ -1,0 +1,52 @@
+{
+  "condition": "minecraft:any_of",
+  "terms": [
+    {
+      "condition": "minecraft:reference",
+      "name": "game:match_components/one_team"
+    },
+    {
+      "condition": "minecraft:value_check",
+      "range": {
+        "min": {
+          "score": "global",
+          "target": {
+            "name": "$max_players_per_team",
+            "type": "minecraft:fixed"
+          },
+          "type": "minecraft:score"
+        }
+      },
+      "value": {
+        "score": "global",
+        "target": {
+          "name": "$yellow_team_count",
+          "type": "minecraft:fixed"
+        },
+        "type": "minecraft:score"
+      }
+    },
+    {
+      "condition": "minecraft:value_check",
+      "range": {
+        "min": 1,
+        "max": {
+          "score": "global",
+          "target": {
+            "name": "$playing_teams_count",
+            "type": "minecraft:fixed"
+          },
+          "type": "minecraft:score"
+        }
+      },
+      "value": {
+        "score": "config",
+        "target": {
+          "name": "$max_players",
+          "type": "minecraft:fixed"
+        },
+        "type": "minecraft:score"
+      }
+    }
+  ]
+}

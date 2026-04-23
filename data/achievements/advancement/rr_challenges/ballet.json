@@ -1,0 +1,25 @@
+{
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "color": "red",
+      "text": "Continuously sprint and jump for an entire match."
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "id": "minecraft:note_block"
+    },
+    "show_toast": true,
+    "title": {
+      "color": "#c20000",
+      "text": "Ballet Dancer"
+    }
+  },
+  "parent": "achievements:rr_zzzhard/root"
+}

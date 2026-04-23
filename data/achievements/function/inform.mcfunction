@@ -1,0 +1,1 @@
+tellraw @s [{italic:true,score:{name:"@s",objective:"text.accent_color"}},"Press ",{color:"light_purple",italic:true,keybind:"key.advancements"}," to open the advancements menu and check out fun challenges!"]

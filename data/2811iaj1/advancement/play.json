@@ -1,0 +1,28 @@
+{
+  "criteria": {
+    "Impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "color": "light_purple",
+      "text": "Play your first match of Rocket Riders."
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "id": "minecraft:sticky_piston"
+    },
+    "show_toast": true,
+    "title": {
+      "color": "#d901d9",
+      "text": "Play a match"
+    }
+  },
+  "parent": "2811iaj1:wait",
+  "rewards": {
+    "function": "2811iaj1:play_indimension"
+  }
+}

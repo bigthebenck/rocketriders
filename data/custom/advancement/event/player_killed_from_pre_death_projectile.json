@@ -1,0 +1,41 @@
+{
+  "criteria": {
+    "get_killed_from_pre_death_projectile": {
+      "conditions": {
+        "damage": {
+          "source_entity": {
+            "type": "minecraft:player"
+          },
+          "type": {
+            "direct_entity": {
+              "predicates": {
+                "minecraft:custom_data": {
+                  "pre_death_projectile": true
+                }
+              }
+            }
+          }
+        },
+        "player": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "dimension": "minecraft:overworld"
+            }
+          },
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:reference",
+              "name": "custom:alive"
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:entity_hurt_player"
+    }
+  },
+  "rewards": {
+    "function": "custom:event/player_killed_from_pre_death_projectile/main"
+  }
+}

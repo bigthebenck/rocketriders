@@ -1,0 +1,14 @@
+{
+  "condition": "minecraft:inverted",
+  "term": {
+    "condition": "minecraft:location_check",
+    "predicate": {
+      "dimension": "minecraft:overworld",
+      "position": {
+        "z": {
+          "min": 0.5
+        }
+      }
+    }
+  }
+}

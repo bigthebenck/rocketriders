@@ -1,0 +1,68 @@
+[
+  {
+    "condition": "minecraft:location_check",
+    "predicate": {
+      "block": {
+        "blocks": "#custom:vortices_ignore"
+      }
+    }
+  },
+  {
+    "condition": "minecraft:inverted",
+    "term": {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "position": {
+          "x": {
+            "min": 9.5,
+            "max": 15.5
+          },
+          "y": {
+            "min": 61,
+            "max": 67
+          },
+          "z": {
+            "min": -68.5,
+            "max": -62.5
+          }
+        }
+      }
+    }
+  },
+  {
+    "condition": "minecraft:inverted",
+    "term": {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "position": {
+          "x": {
+            "min": 9.5,
+            "max": 15.5
+          },
+          "y": {
+            "min": 61,
+            "max": 67
+          },
+          "z": {
+            "min": 63.5,
+            "max": 69.5
+          }
+        }
+      }
+    }
+  },
+  {
+    "condition": "minecraft:inverted",
+    "term": {
+      "condition": "minecraft:reference",
+      "name": "custom:near_flag_base"
+    }
+  },
+  {
+    "condition": "minecraft:inverted",
+    "term": {
+      "condition": "minecraft:reference",
+      "name": "custom:near_or_above_roof"
+    }
+  }
+]

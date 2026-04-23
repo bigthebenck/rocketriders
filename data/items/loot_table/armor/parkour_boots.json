@@ -1,0 +1,43 @@
+{
+  "pools": [
+    {
+      "entries": [
+        {
+          "functions": [
+            {
+              "components": {
+                "minecraft:attribute_modifiers": [],
+                "minecraft:enchantment_glint_override": false,
+                "minecraft:enchantments": {
+                  "minecraft:binding_curse": 1
+                },
+                "minecraft:item_name": {
+                  "bold": true,
+                  "color": "dark_green",
+                  "italic": false,
+                  "text": "Parkour Boots"
+                },
+                "minecraft:tooltip_display": {
+                  "hidden_components": [
+                    "minecraft:enchantments",
+                    "minecraft:trim",
+                    "minecraft:unbreakable"
+                  ]
+                },
+                "minecraft:trim": {
+                  "material": "minecraft:emerald",
+                  "pattern": "minecraft:wayfinder"
+                },
+                "minecraft:unbreakable": {}
+              },
+              "function": "minecraft:set_components"
+            }
+          ],
+          "name": "minecraft:iron_boots",
+          "type": "minecraft:item"
+        }
+      ],
+      "rolls": 1
+    }
+  ]
+}

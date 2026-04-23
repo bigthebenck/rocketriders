@@ -1,0 +1,24 @@
+{
+  "criteria": {
+    "player_non_fatally_hurt": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "dimension": "minecraft:overworld"
+            }
+          },
+          {
+            "condition": "minecraft:reference",
+            "name": "custom:alive"
+          }
+        ]
+      },
+      "trigger": "minecraft:entity_hurt_player"
+    }
+  },
+  "rewards": {
+    "function": "custom:event/player_non_fatally_hurt/main"
+  }
+}

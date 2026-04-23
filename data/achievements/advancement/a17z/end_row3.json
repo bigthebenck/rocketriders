@@ -1,0 +1,25 @@
+{
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "color": "green",
+      "text": "The Easy difficulty challenges for Rocket Riders."
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "id": "minecraft:lime_concrete"
+    },
+    "show_toast": false,
+    "title": {
+      "color": "#00be2f",
+      "text": "Easy Challenges"
+    }
+  },
+  "parent": "achievements:rr_challenges/cryaboutit"
+}

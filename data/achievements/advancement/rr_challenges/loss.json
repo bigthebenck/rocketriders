@@ -1,0 +1,25 @@
+{
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "color": "gold",
+      "text": "Lose a match after winning at least 10 matches in a row."
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "id": "minecraft:ghast_tear"
+    },
+    "show_toast": true,
+    "title": {
+      "color": "#fe6309",
+      "text": "| || || |_"
+    }
+  },
+  "parent": "achievements:rr_challenges/useful"
+}

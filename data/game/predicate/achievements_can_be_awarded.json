@@ -1,0 +1,32 @@
+[
+  {
+    "condition": "minecraft:reference",
+    "name": "rr:has_achievements"
+  },
+  {
+    "condition": "minecraft:reference",
+    "name": "game:phase/match"
+  },
+  {
+    "condition": "minecraft:inverted",
+    "term": {
+      "condition": "minecraft:reference",
+      "name": "game:match_components/no_achievements"
+    }
+  },
+  {
+    "condition": "minecraft:inverted",
+    "term": {
+      "condition": "minecraft:value_check",
+      "range": 1,
+      "value": {
+        "score": "global",
+        "target": {
+          "name": "$1v1_duel_time_out_period",
+          "type": "minecraft:fixed"
+        },
+        "type": "minecraft:score"
+      }
+    }
+  }
+]

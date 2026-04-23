@@ -1,0 +1,25 @@
+{
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "color": "gold",
+      "text": "Kill an enemy on your Canopy."
+    },
+    "frame": "goal",
+    "hidden": false,
+    "icon": {
+      "id": "minecraft:short_grass"
+    },
+    "show_toast": true,
+    "title": {
+      "color": "#fe6309",
+      "text": "Get Off My Lawn!"
+    }
+  },
+  "parent": "achievements:rr_challenges/fire_within_me"
+}

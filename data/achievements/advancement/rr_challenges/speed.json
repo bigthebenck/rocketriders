@@ -1,0 +1,49 @@
+{
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "color": "green",
+      "text": "Win a Chase Mode match by reaching the checkered flag."
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "components": {
+        "minecraft:banner_patterns": [
+          {
+            "color": "black",
+            "pattern": "half_vertical_right"
+          },
+          {
+            "color": "black",
+            "pattern": "square_top_left"
+          },
+          {
+            "color": "black",
+            "pattern": "square_bottom_left"
+          },
+          {
+            "color": "white",
+            "pattern": "square_top_right"
+          },
+          {
+            "color": "white",
+            "pattern": "square_bottom_right"
+          }
+        ]
+      },
+      "id": "minecraft:white_banner"
+    },
+    "show_toast": true,
+    "title": {
+      "color": "#00be2f",
+      "text": "I Am Speed"
+    }
+  },
+  "parent": "achievements:rr_challenges/helping"
+}

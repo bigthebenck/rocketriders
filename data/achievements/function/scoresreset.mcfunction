@@ -1,0 +1,24 @@
+##Runs at the end of the match to reset any ingame statistics for achievements
+scoreboard players reset @a[x=0] jumping
+scoreboard players reset @a[x=0] timeSinceJump
+scoreboard players reset @a[x=0] FallDistance
+scoreboard players reset @a[x=0] gravShot
+scoreboard players reset @a[x=0] regifts
+advancement revoke @a[x=0,tag=!Regifting] only achievements:rr_challenges/regifting
+scoreboard players reset @a[x=0] notBackwards
+scoreboard players reset @a[x=0] standStill
+tag @a[x=0] remove beenOnBlue
+tag @a[x=0] remove beenOnYellow
+tag @a[x=0] remove beenOnBoth
+tag @a[x=0] remove onBlue
+tag @a[x=0] remove onYellow
+tag @a[x=0] remove FailedMoon
+tag @a[x=0] remove FailedBallet
+tag @a[x=0] remove firstMoved
+tag @a[x=0] remove SwissCheese
+tag @a[x=0] remove SimpleAndClean
+tag @a[x=0] remove DeusExMachina
+tag @a[x=0] remove HadIt
+tag @a[x=0] remove Loneliest
+tag @a[x=0] remove Forsaken
+tag @a[x=0] remove GroundBound
