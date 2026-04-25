@@ -1,0 +1,1 @@
+function entities:type/spell_emitter/summon_fire

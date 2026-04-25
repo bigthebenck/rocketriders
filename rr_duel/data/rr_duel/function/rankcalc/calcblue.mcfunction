@@ -1,0 +1,95 @@
+#Basic rankpoint formula:
+#RankResult = 80+losersXP*WinnersRankScore/50
+#Winner gains that amount
+#Loser loses RankResult*LosersRankScore/10
+#Loser gains WinnersXP*LosersRankScore/600
+
+#set the values for later maths.
+scoreboard players set $XPLoss XP 0
+scoreboard players set $Buffer XP 0
+scoreboard players set $NetBlue XP 0
+scoreboard players set $NetYellow XP 0
+
+#Rank change detect part 1
+function rr_duel:rankcalc/rankchange1
+
+##GAIN
+#Take current XP value of blue and yellow player.
+scoreboard players operation $CurrentBlue XP = @a[x=0,predicate=custom:team/blue,limit=1] XP
+scoreboard players operation $CurrentYellow XP = @a[x=0,predicate=custom:team/yellow,limit=1] XP
+
+#Set rankresult to 80
+scoreboard players set $RankResult XP 80
+
+#CurrentYellow / 50
+scoreboard players operation $CurrentYellow XP /= $50 constant
+
+#CurrentYellow * YellowRankScore
+execute if entity @a[x=0,predicate=custom:team/blue,limit=1] run scoreboard players operation $CurrentYellow XP *= @a[x=0,predicate=custom:team/blue,limit=1] RankScore
+
+#RankResult+CurrentYellow = new RankResult
+scoreboard players operation $RankResult XP += $CurrentYellow XP
+
+#Add the RankResult scores to the Blue player
+scoreboard players operation @a[x=0,predicate=custom:team/blue,limit=1] XP += $RankResult XP
+scoreboard players operation $NetBlue XP += $RankResult XP
+
+#Adjust Blue XP to below 1301
+execute if entity @a[x=0,predicate=custom:team/blue,scores={XP=1301..},limit=1] run scoreboard players operation $DiffBlue XP = @a[x=0,predicate=custom:team/blue,limit=1,scores={XP=1301..}] XP
+execute if entity @a[x=0,predicate=custom:team/blue,scores={XP=1301..},limit=1] run scoreboard players operation $DiffBlue XP -= $1300 constant
+execute if entity @a[x=0,predicate=custom:team/blue,scores={XP=1301..},limit=1] run scoreboard players operation $NetBlue XP -= $DiffBlue XP
+scoreboard players set @a[x=0,predicate=custom:team/blue,scores={XP=1301..},limit=1] XP 1300
+
+#Announce new Blue XP
+execute as @a[x=0,predicate=custom:team/blue,limit=1] run tellraw @a[x=0] ["",{"selector":"@s","color":"green"},{"text":" gained ","color":"green"},{"score":{"name":"$NetBlue","objective":"XP"},"bold":true,"color":"dark_green"},{"text":", making their XP a total of: ","color":"green"},{"score":{"name":"@s","objective":"XP"},"bold":true,"color":"light_purple"}]
+
+##LOSS
+#Set LossXP to RankResult
+scoreboard players operation $LossXP XP = $RankResult XP
+
+#LossXP * YellowRankScore
+execute if entity @a[x=0,predicate=custom:team/yellow,limit=1] run scoreboard players operation $LossXP XP *= @a[x=0,predicate=custom:team/yellow,limit=1] RankScore
+
+#LossXP / 10
+scoreboard players operation $LossXP XP /= $10 constant
+
+#Subtract the LossXP score from the Yellow player
+scoreboard players operation @a[x=0,predicate=custom:team/yellow,limit=1] XP -= $LossXP XP
+scoreboard players operation $NetYellow XP += $LossXP XP
+
+#Set Buffer to current Blue XP
+scoreboard players operation $Buffer XP = @a[x=0,predicate=custom:team/blue,limit=1] XP
+
+#Buffer * YellowRankScore
+scoreboard players operation $Buffer XP *= @a[x=0,predicate=custom:team/yellow,limit=1] RankScore
+
+#Buffer / 600
+scoreboard players operation $Buffer XP /= $600 constant
+
+#Add the Buffer score to the Yellow player
+scoreboard players operation @a[x=0,predicate=custom:team/yellow,limit=1] XP += $Buffer XP
+scoreboard players operation $NetYellow XP -= $Buffer XP
+
+#Adjust Yellow XP to above -1
+execute if entity @a[x=0,predicate=custom:team/yellow,scores={XP=..-1},limit=1] run scoreboard players operation $NetYellow XP += @a[x=0,predicate=custom:team/yellow,limit=1] XP
+scoreboard players set @a[x=0,predicate=custom:team/yellow,scores={XP=..-1},limit=1] XP 0
+
+#Announce new Yellow XP
+execute as @a[x=0,predicate=custom:team/yellow,limit=1] run tellraw @a[x=0] ["",{"selector":"@s","color":"red"},{"text":" lost ","color":"red"},{"score":{"name":"$NetYellow","objective":"XP"},"bold":true,"color":"dark_red"},{"text":", making their XP a total of: ","color":"red"},{"score":{"name":"@s","objective":"XP"},"bold":true,"color":"light_purple"}]
+
+#Rank change detect part 2
+function rr_duel:rankcalc/rankchange2
+
+#Reset all scores (optimization)
+scoreboard players reset $XPLoss XP
+scoreboard players reset $CurrentBlue XP
+scoreboard players reset $CurrentYellow XP
+scoreboard players reset $RankResult XP
+scoreboard players reset $LossXP XP
+scoreboard players reset $Buffer XP
+scoreboard players reset $NetBlue XP
+scoreboard players reset $NetYellow XP
+scoreboard players reset $DiffBlue XP
+
+#Save XP
+function custom:player_action/playerdata/save

@@ -1,3 +1,0 @@
-##Notify player about waiting area
-tellraw @s ["",{"text":"<","color":"dark_gray"},{"text":"Tutorial","bold":true,"color":"green"},{"text":"> ","color":"dark_gray"},{"text":"When at least 2 players have joined a team, a countdown will start. If you wish to join a different team, jump off of the platform you are on to leave the team.","color":"gray"}]
-execute at @s run playsound minecraft:block.note_block.iron_xylophone master @s ~ ~ ~ 0.5 2

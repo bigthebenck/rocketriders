@@ -1,0 +1,6 @@
+tellraw @s ["",{"text":"Normal Mode:","color":"light_purple","bold":true},{"text":" The default game mode of Rocket Riders"}]
+tellraw @s ["",{"text":"| ","bold":true,"color":"dark_gray"},{"text":"Objective:","color":"gold"},{"text":" Destroy enemy portals","color":"yellow"}]
+tellraw @s ["",{"text":"| ","bold":true,"color":"dark_gray"},{"text":"- Ride missiles to enemy base to destroy portals"}]
+tellraw @s ["",{"text":"| ","bold":true,"color":"dark_gray"},{"text":"- Protect your own team's portals"}]
+tellraw @s ["",{"text":"| ","bold":true,"color":"dark_gray"},{"text":"Items:","color":"aqua"},{"text":" Various missiles and utilities"}]
+tellraw @s [""]

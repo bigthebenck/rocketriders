@@ -1,2 +1,0 @@
-fill 100 158 28 110 115 -28 light_gray_stained_glass strict
-schedule function arenaclear:molerat_place/85 1t

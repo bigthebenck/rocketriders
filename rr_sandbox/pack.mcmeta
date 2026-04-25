@@ -1,0 +1,16 @@
+{
+  "pack": {
+    "min_format": 88,
+    "max_format": 101,
+    "description": "Rocket Riders Sandbox Game Mode."
+  },
+  "overlays": {
+    "entries": [
+      {
+        "directory": "overlay-1_21_10",
+        "min_format": 88,
+        "max_format": 88
+      }
+    ]
+  }
+}

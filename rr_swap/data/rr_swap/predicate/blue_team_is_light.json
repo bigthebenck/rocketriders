@@ -1,0 +1,12 @@
+{
+  "condition": "minecraft:value_check",
+  "range": 0,
+  "value": {
+    "score": "global",
+    "target": {
+      "name": "$swap_side",
+      "type": "minecraft:fixed"
+    },
+    "type": "minecraft:score"
+  }
+}

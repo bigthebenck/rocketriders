@@ -1,0 +1,1 @@
+function custom:team/switch_team
