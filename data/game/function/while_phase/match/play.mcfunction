@@ -21,6 +21,16 @@ function items:full_hotbar
 ##Game time
 scoreboard players add $match_play_time global 1
 
+##Arrow top-up every 45 seconds
+execute store result score $arrow_top_up_tick var run scoreboard players get $match_play_time global
+scoreboard players operation $arrow_top_up_tick var %= $900 constant
+execute if score $arrow_top_up_tick var matches 0 if score $match_play_time global matches 1.. if predicate game:item_pool/arrow if entity @s[tag=!crusadeEnabled] unless predicate game:game_rules/disable_arrow_top_up/on run function items:arrow_top_up
+
+##Team stained glass gift every 2 minutes
+execute store result score $team_glass_tick var run scoreboard players get $match_play_time global
+scoreboard players operation $team_glass_tick var %= $2400 constant
+execute if score $team_glass_tick var matches 0 if score $match_play_time global matches 1.. unless predicate game:game_rules/disable_team_glass_gift/on run function items:team_glass_gift
+
 ##Put out players on fire
 execute if score $match_play_time global matches 1..5 as @a[x=0,predicate=custom:team/any_playing_team,predicate=custom:is_on_fire] at @s run function game:putoutfire
 

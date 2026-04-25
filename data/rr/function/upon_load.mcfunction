@@ -79,6 +79,7 @@ scoreboard players set $180 constant 180
 scoreboard players set $300 constant 300
 scoreboard players set $360 constant 360
 scoreboard players set $400 constant 400
+scoreboard players set $900 constant 900
 scoreboard players set $1000 constant 1000
 scoreboard players set $1200 constant 1200
 scoreboard players set $2400 constant 2400

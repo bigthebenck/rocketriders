@@ -16,6 +16,13 @@ tag @s remove tetrisTime
 execute unless predicate game:modifiers/special_treatment/on if entity @s[tag=givenAllNormal,tag=givenAllHeavy,tag=givenAllLightning,tag=givenAllUtil] run function items:tetrisreset
 execute if predicate game:modifiers/special_treatment/on if entity @s[tag=givenAllNormal,tag=givenAllHeavy,tag=givenAllLightning,tag=givenAllSpecial,tag=givenAllUtil] run function items:tetrisreset
 
+##Once the boost item fires (second call), mark it so it only happens once
+execute unless predicate game:game_rules/disable_boost_item/on if entity @s[tag=gaveFirstItem,tag=!gaveBoostItem] run tag @s add gaveBoostItem
+
+##After the first item, schedule a boost item 10 ticks later with the full pool
+execute unless predicate game:game_rules/disable_boost_item/on if entity @s[tag=!gaveFirstItem] run scoreboard players operation @s RandomItem = @s MaxItemTime
+execute unless predicate game:game_rules/disable_boost_item/on if entity @s[tag=!gaveFirstItem] run scoreboard players remove @s RandomItem 10
+
 tag @s add gaveFirstItem
 
 ##Actionbar notifications

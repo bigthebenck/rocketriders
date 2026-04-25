@@ -20,6 +20,7 @@ kill @e[x=0,predicate=entities:type/canopy_projectile]
 
 # Reset items and effects
 tag @s remove gaveFirstItem
+tag @s remove gaveBoostItem
 clear @a[x=0,predicate=custom:team/any_arena_team] *
 scoreboard players reset @a[x=0] shooting_saber.infinity_time
 scoreboard players reset @a[x=0] shooting_saber.multishot_time

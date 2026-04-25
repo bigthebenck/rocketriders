@@ -7,6 +7,7 @@ tag @e[x=0,type=armor_stand,tag=Selection,limit=1] remove Countdown
 tag @e[x=0,type=armor_stand,tag=Selection,limit=1] remove forceCountdown
 tag @e[x=0,type=armor_stand,tag=Selection,limit=1] remove bossbarOverride
 tag @e[x=0,type=armor_stand,tag=Selection,limit=1] remove gaveFirstItem
+tag @e[x=0,type=armor_stand,tag=Selection,limit=1] remove gaveBoostItem
 scoreboard players set @e[x=0,type=armor_stand,tag=Selection,limit=1] count 0
 worldborder warning distance 0
 
