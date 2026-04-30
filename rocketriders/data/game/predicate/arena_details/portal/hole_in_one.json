@@ -1,0 +1,28 @@
+[
+  {
+    "condition": "minecraft:value_check",
+    "range": 4,
+    "value": {
+      "score": "config",
+      "target": {
+        "name": "$arena_details/portal",
+        "type": "minecraft:fixed"
+      },
+      "type": "minecraft:score"
+    }
+  },
+  {
+    "condition": "minecraft:inverted",
+    "term": {
+      "condition": "minecraft:reference",
+      "name": "game:match_components/arena/no_portal_details"
+    }
+  },
+  {
+    "condition": "minecraft:inverted",
+    "term": {
+      "condition": "minecraft:reference",
+      "name": "game:match_components/no_portals"
+    }
+  }
+]

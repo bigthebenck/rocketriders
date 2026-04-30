@@ -1,0 +1,25 @@
+{
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "color": "green",
+      "text": "Win a match while your portal is exposed."
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "id": "minecraft:white_stained_glass"
+    },
+    "show_toast": true,
+    "title": {
+      "color": "#00be2f",
+      "text": "Deus Ex Machina"
+    }
+  },
+  "parent": "achievements:rr_challenges/uphere"
+}

@@ -1,0 +1,20 @@
+{
+  "criteria": {
+    "bee_kill": {
+      "conditions": {
+        "entity": {
+          "type": "minecraft:bee"
+        },
+        "player": {
+          "location": {
+            "dimension": "minecraft:overworld"
+          }
+        }
+      },
+      "trigger": "minecraft:entity_killed_player"
+    }
+  },
+  "rewards": {
+    "function": "achievements:beehere_indimension"
+  }
+}

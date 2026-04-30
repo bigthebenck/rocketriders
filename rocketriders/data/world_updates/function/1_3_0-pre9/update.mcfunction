@@ -1,0 +1,1 @@
+data remove storage rocketriders:navbook default_spell_setting

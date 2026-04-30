@@ -1,0 +1,25 @@
+{
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "color": "gold",
+      "text": "The Medium difficulty challenges for Rocket Riders."
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "id": "minecraft:orange_concrete"
+    },
+    "show_toast": false,
+    "title": {
+      "color": "#fe6309",
+      "text": "Medium Challenges"
+    }
+  },
+  "parent": "achievements:rr_challenges/beehere"
+}

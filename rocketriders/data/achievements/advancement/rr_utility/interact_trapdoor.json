@@ -1,0 +1,22 @@
+{
+  "criteria": {
+    "requirement": {
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": "#minecraft:trapdoors"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:item_used_on_block"
+    }
+  },
+  "rewards": {
+    "function": "lobby:parkour/trapdoors"
+  }
+}

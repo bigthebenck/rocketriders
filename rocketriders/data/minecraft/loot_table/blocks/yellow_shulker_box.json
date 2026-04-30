@@ -1,0 +1,88 @@
+{
+  "__smithed__": {
+    "priority": {
+      "stage": "early"
+    },
+    "rules": [
+      {
+        "source": {
+          "path": "pools[0].conditions[0]",
+          "type": "reference"
+        },
+        "target": "pools[0].conditions",
+        "type": "append"
+      },
+      {
+        "source": {
+          "path": "pools[1]",
+          "type": "reference"
+        },
+        "target": "pools",
+        "type": "append"
+      }
+    ]
+  },
+  "pools": [
+    {
+      "bonus_rolls": 0,
+      "conditions": [
+        {
+          "condition": "minecraft:inverted",
+          "term": {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "predicates": {
+                "minecraft:custom_data": {
+                  "drop_contents": 1
+                }
+              }
+            }
+          }
+        }
+      ],
+      "entries": [
+        {
+          "functions": [
+            {
+              "function": "minecraft:copy_components",
+              "include": [
+                "minecraft:custom_name",
+                "minecraft:container",
+                "minecraft:lock",
+                "minecraft:container_loot"
+              ],
+              "source": "block_entity"
+            }
+          ],
+          "name": "minecraft:yellow_shulker_box",
+          "type": "minecraft:item"
+        }
+      ],
+      "rolls": 1
+    },
+    {
+      "bonus_rolls": 0,
+      "conditions": [
+        {
+          "condition": "minecraft:match_tool",
+          "predicate": {
+            "predicates": {
+              "minecraft:custom_data": {
+                "drop_contents": 1
+              }
+            }
+          }
+        }
+      ],
+      "entries": [
+        {
+          "name": "minecraft:contents",
+          "type": "minecraft:dynamic"
+        }
+      ],
+      "rolls": 1
+    }
+  ],
+  "random_sequence": "minecraft:blocks/yellow_shulker_box",
+  "type": "minecraft:block"
+}

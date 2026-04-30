@@ -1,0 +1,30 @@
+{
+  "condition": "minecraft:any_of",
+  "terms": [
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": { "team": "rocketriders.sort_200.lobby" }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": { "team": "rocketriders.sort_300.Pristine" }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": { "team": "rocketriders.sort_301.Prime" }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": { "team": "rocketriders.sort_302.Private" }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": { "team": "rocketriders.sort_303.Premium" }
+    }
+  ]
+}

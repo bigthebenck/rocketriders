@@ -1,0 +1,18 @@
+{
+  "criteria": {
+    "inventory_changed_while_in_lobby": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:reference",
+            "name": "custom:team/lobby"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "rewards": {
+    "function": "lobby:inventory_changed_while_in_lobby"
+  }
+}

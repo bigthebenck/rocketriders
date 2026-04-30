@@ -1,0 +1,19 @@
+{
+  "criteria": {
+    "use_item": {
+      "conditions": {
+        "item": {
+          "predicates": {
+            "minecraft:custom_data": {
+              "id": "parkour/return_to_start"
+            }
+          }
+        }
+      },
+      "trigger": "minecraft:using_item"
+    }
+  },
+  "rewards": {
+    "function": "lobby:parkour/useclock"
+  }
+}
